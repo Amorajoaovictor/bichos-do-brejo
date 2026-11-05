@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "integrated": false,
+  "assets": 72,
+  "slots": 8,
+  "views": 4,
+  "poseSamples": 168,
+  "checks": [
+    "PNG com transparência e medidas do manifesto",
+    "poses finitas em todas as ações e vistas",
+    "esforço contínuo e alívio da rajada",
+    "derrota mantém pose final"
+  ],
+  "browserReview": {
+    "method": "inspeção pelo navegador e capturas reais",
+    "actions": 7,
+    "controls": [
+      "oito opções independentes",
+      "braço direito alterado mantendo esquerdo original",
+      "quatro vistas",
+      "pausa e reprodução",
+      "tempo exato",
+      "camadas separadas",
+      "isolar parte",
+      "encaixes"
+    ],
+    "consoleErrors": []
+  },
+  "limitations": [
+    "movimentos de estudo por articulação; ações complexas ainda precisam de desenhos específicos das partes",
+    "não validado como substituto final dos quadros do jogo",
+    "exemplos de mutação não definem regras de combate"
+  ]
+}

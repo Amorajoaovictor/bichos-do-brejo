@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Farrapo · animações em PNG</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#242b22;color:#eee3c9;font:16px system-ui}main{max-width:1040px;margin:auto;padding:24px}a{color:#d9cc94}h1{font:italic 34px Georgia;margin:18px 0 8px}p{color:#b6bea5;line-height:1.5}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;position:sticky;top:0;z-index:2;padding:14px 0;background:#242b22}button,select{padding:9px;border:1px solid #879674;background:#45523b;color:inherit;font:inherit}input{max-width:200px;accent-color:#b5c894}#stage{position:relative;width:100%;aspect-ratio:1.1;background:#30382c;border-radius:12px;overflow:hidden}#stage canvas{display:block;width:100%;height:100%}.labels{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;pointer-events:none}.labels span{padding:16px;color:#c7c8ad;font-size:13px}#counter{min-width:110px;font-size:13px}.hint{font-size:14px}@media(max-width:600px){main{padding:12px}.controls{gap:7px}button,select{font-size:13px}#stage{aspect-ratio:.85}}</style>
+<main><a href="/">← Jogar</a><h1>Farrapo</h1><p>Repouso, saltos, coice, rajada, dano e derrota nas quatro direções.</p><div class="controls"><select id="action"><option value="idle">Repouso</option><option value="walk">Salto</option><option value="rabbit">Coice</option><option value="barrage">Rajada</option><option value="hit">Dano</option><option value="bleed">Sangramento</option><option value="death">Derrota</option></select><button id="play">Pausar</button><input id="frame" type="range" min="0" max="1000" value="0" aria-label="Ponto da animação"><span id="counter"></span><select id="speed" aria-label="Velocidade"><option value=".5">0,5×</option><option selected value="1">1×</option><option value="1.5">1,5×</option></select><select id="pose" aria-label="Desenho individual"><option value="">Ver desenho…</option></select></div><div id="stage"><div class="labels"><span>Direita</span><span>Esquerda</span><span>Frente · baixo</span><span>Costas · cima</span></div></div><p class="hint">Pause para observar uma pose ou use “Ver desenho” para inspecionar os 24 desenhos de cada vista. A derrota segura a última pose. A rajada mantém os olhos fechados durante o esforço e termina com alívio.</p><p id="loading">Carregando os desenhos…</p></main>
+<script type="module">
+import * as THREE from '/vendor/three.module.js';
+import {installRabbitPng} from '/rabbit-png.js';
+import {RABBIT_PNG_TIMING,RABBIT_PNG_VIEWS,RABBIT_PNG_POSES,RABBIT_RELIEF_HOLD,rabbitReliefFrame,barrageFlush,rabbitPreviewDuration,rabbitPreviewProgress} from '/rabbit-png-frames.js';
+import {movementSample} from '/animation.js';
+const stage=document.getElementById('stage'),action=document.getElementById('action'),range=document.getElementById('frame'),play=document.getElementById('play'),pose=document.getElementById('pose');
+const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;stage.prepend(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.OrthographicCamera(-1,1,1.65,-.08,.1,10);camera.position.z=5;
+const rigs=await Promise.all(RABBIT_PNG_VIEWS.map(async view=>{const root=new THREE.Group(),art=new THREE.Group();root.add(art);scene.add(root);const rig={root,art,phase:0};await installRabbitPng(rig);rig.setDirection(view);return rig;}));
+for(let i=0;i<RABBIT_PNG_POSES;i++){const option=document.createElement('option');option.value=i;option.textContent=i>=24?['Alívio · soltar','Alívio · suspiro','Alívio · descanso'][i-24]:'Desenho '+(i+1);pose.append(option);}
+document.getElementById('loading').hidden=true;
+let playing=true,elapsed=0,last=performance.now(),progress=0;
+function show(){
+  const kind=action.value;
+  rigs.forEach(rig=>{rig.resetPose();rig.setFaceFlush(kind==='barrage'?barrageFlush(progress):0);if(pose.value!=='')rig.showPose(+pose.value);else if(kind==='barrage'&&progress>=1)rig.showPose(rabbitReliefFrame((elapsed-RABBIT_PNG_TIMING.barrage)/RABBIT_RELIEF_HOLD));else rig.showActionFrame(kind,progress);if(kind==='walk'&&pose.value==='')rig.art.position.y=movementSample('rabbit',progress).lift;});
+  const width=stage.clientWidth,height=stage.clientHeight;renderer.setSize(width,height,false);renderer.setScissorTest(true);
+  for(let i=0;i<4;i++){
+    rigs.forEach((rig,j)=>rig.root.visible=i===j);
+    const x=i%2*Math.floor(width/2),y=(i<2?1:0)*Math.floor(height/2),w=Math.floor(width/2),h=Math.floor(height/2);
+    camera.left=-.865*w/h;camera.right=.865*w/h;camera.updateProjectionMatrix();renderer.setViewport(x,y,w,h);renderer.setScissor(x,y,w,h);renderer.render(scene,camera);
+  }
+  range.value=Math.round(Math.min(1,elapsed/rabbitPreviewDuration(kind))*1000);document.getElementById('counter').textContent=(kind==='barrage'&&progress>=1?'Alívio · ':'')+'Desenho '+(rigs[0].frameIndex+1)+' / '+RABBIT_PNG_POSES;
+}
+play.onclick=()=>{if(action.value==='death'&&progress>=1){elapsed=0;progress=0;}pose.value='';playing=!playing;play.textContent=playing?'Pausar':'Reproduzir';};
+action.onchange=()=>{elapsed=progress=0;pose.value='';show();};
+range.oninput=()=>{playing=false;play.textContent='Reproduzir';pose.value='';elapsed=+range.value/1000*rabbitPreviewDuration(action.value);progress=action.value==='barrage'?Math.min(1,elapsed/RABBIT_PNG_TIMING.barrage):+range.value/1000;show();};
+pose.onchange=()=>{playing=false;play.textContent='Reproduzir';show();};
+new ResizeObserver(show).observe(stage);
+function tick(now){if(playing){elapsed+=Math.min(.05,(now-last)/1000)*+document.getElementById('speed').value;const duration=RABBIT_PNG_TIMING[action.value];if(action.value==='death'&&elapsed>=duration){elapsed=duration;playing=false;play.textContent='Reproduzir';}else if(action.value!=='death')elapsed%=rabbitPreviewDuration(action.value);progress=rabbitPreviewProgress(action.value,elapsed);show();}last=now;requestAnimationFrame(tick);}show();requestAnimationFrame(tick);
+window.rabbitPreview={rigs,renderer,scene,camera,show};
+</script></html>

@@ -1,0 +1,403 @@
+{
+  "character": "Rosnaldo",
+  "action": "repouso",
+  "version": 2,
+  "design": "Cartoon de cores planas, feridas, sangue e necrose; sem ossos expostos.",
+  "status": "Integrado em PNG nas quatro direções.",
+  "frameDurationMs": 160,
+  "durationMs": 1920,
+  "frameCount": 12,
+  "columns": 4,
+  "rows": 3,
+  "loop": true,
+  "directions": [
+    {
+      "direction": "direita",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "alpha": true,
+      "frames": 12,
+      "frameSize": 362,
+      "scale": 0.8586666666666667,
+      "figures": [
+        {
+          "pixels": 72159,
+          "left": 8,
+          "top": 37,
+          "right": 380,
+          "bottom": 336
+        },
+        {
+          "pixels": 71780,
+          "left": 377,
+          "top": 36,
+          "right": 739,
+          "bottom": 336
+        },
+        {
+          "pixels": 71578,
+          "left": 736,
+          "top": 37,
+          "right": 1095,
+          "bottom": 336
+        },
+        {
+          "pixels": 70103,
+          "left": 1090,
+          "top": 39,
+          "right": 1444,
+          "bottom": 336
+        },
+        {
+          "pixels": 73402,
+          "left": 8,
+          "top": 385,
+          "right": 381,
+          "bottom": 687
+        },
+        {
+          "pixels": 72879,
+          "left": 377,
+          "top": 381,
+          "right": 739,
+          "bottom": 687
+        },
+        {
+          "pixels": 72395,
+          "left": 733,
+          "top": 384,
+          "right": 1098,
+          "bottom": 686
+        },
+        {
+          "pixels": 71178,
+          "left": 1091,
+          "top": 384,
+          "right": 1447,
+          "bottom": 685
+        },
+        {
+          "pixels": 72834,
+          "left": 5,
+          "top": 734,
+          "right": 379,
+          "bottom": 1036
+        },
+        {
+          "pixels": 72931,
+          "left": 375,
+          "top": 732,
+          "right": 742,
+          "bottom": 1036
+        },
+        {
+          "pixels": 72068,
+          "left": 736,
+          "top": 733,
+          "right": 1097,
+          "bottom": 1036
+        },
+        {
+          "pixels": 71096,
+          "left": 1092,
+          "top": 732,
+          "right": 1447,
+          "bottom": 1036
+        }
+      ]
+    },
+    {
+      "direction": "esquerda",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "alpha": true,
+      "frames": 12,
+      "frameSize": 362,
+      "scale": 0.8870523415977961,
+      "figures": [
+        {
+          "pixels": 73888,
+          "left": 19,
+          "top": 45,
+          "right": 381,
+          "bottom": 353
+        },
+        {
+          "pixels": 72690,
+          "left": 401,
+          "top": 45,
+          "right": 747,
+          "bottom": 353
+        },
+        {
+          "pixels": 72729,
+          "left": 761,
+          "top": 45,
+          "right": 1110,
+          "bottom": 353
+        },
+        {
+          "pixels": 70171,
+          "left": 1123,
+          "top": 48,
+          "right": 1447,
+          "bottom": 353
+        },
+        {
+          "pixels": 74567,
+          "left": 20,
+          "top": 392,
+          "right": 382,
+          "bottom": 703
+        },
+        {
+          "pixels": 73176,
+          "left": 393,
+          "top": 397,
+          "right": 745,
+          "bottom": 703
+        },
+        {
+          "pixels": 73192,
+          "left": 756,
+          "top": 397,
+          "right": 1109,
+          "bottom": 702
+        },
+        {
+          "pixels": 69898,
+          "left": 1122,
+          "top": 400,
+          "right": 1447,
+          "bottom": 703
+        },
+        {
+          "pixels": 73924,
+          "left": 21,
+          "top": 745,
+          "right": 383,
+          "bottom": 1052
+        },
+        {
+          "pixels": 73051,
+          "left": 392,
+          "top": 745,
+          "right": 738,
+          "bottom": 1052
+        },
+        {
+          "pixels": 72552,
+          "left": 750,
+          "top": 746,
+          "right": 1100,
+          "bottom": 1052
+        },
+        {
+          "pixels": 71787,
+          "left": 1109,
+          "top": 745,
+          "right": 1446,
+          "bottom": 1052
+        }
+      ]
+    },
+    {
+      "direction": "frente",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "alpha": true,
+      "frames": 12,
+      "frameSize": 362,
+      "scale": 0.9279538904899135,
+      "figures": [
+        {
+          "pixels": 78220,
+          "left": 21,
+          "top": 21,
+          "right": 360,
+          "bottom": 353
+        },
+        {
+          "pixels": 78995,
+          "left": 373,
+          "top": 21,
+          "right": 712,
+          "bottom": 353
+        },
+        {
+          "pixels": 79870,
+          "left": 725,
+          "top": 21,
+          "right": 1066,
+          "bottom": 353
+        },
+        {
+          "pixels": 79423,
+          "left": 1080,
+          "top": 21,
+          "right": 1418,
+          "bottom": 353
+        },
+        {
+          "pixels": 80731,
+          "left": 17,
+          "top": 367,
+          "right": 363,
+          "bottom": 702
+        },
+        {
+          "pixels": 79008,
+          "left": 371,
+          "top": 367,
+          "right": 712,
+          "bottom": 702
+        },
+        {
+          "pixels": 78770,
+          "left": 724,
+          "top": 375,
+          "right": 1066,
+          "bottom": 702
+        },
+        {
+          "pixels": 76519,
+          "left": 1079,
+          "top": 379,
+          "right": 1420,
+          "bottom": 702
+        },
+        {
+          "pixels": 80200,
+          "left": 20,
+          "top": 717,
+          "right": 363,
+          "bottom": 1049
+        },
+        {
+          "pixels": 77320,
+          "left": 375,
+          "top": 722,
+          "right": 713,
+          "bottom": 1049
+        },
+        {
+          "pixels": 77583,
+          "left": 729,
+          "top": 723,
+          "right": 1067,
+          "bottom": 1049
+        },
+        {
+          "pixels": 75309,
+          "left": 1080,
+          "top": 725,
+          "right": 1418,
+          "bottom": 1049
+        }
+      ]
+    },
+    {
+      "direction": "costas",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "alpha": true,
+      "frames": 12,
+      "frameSize": 362,
+      "scale": 0.9415204678362573,
+      "figures": [
+        {
+          "pixels": 77324,
+          "left": 24,
+          "top": 28,
+          "right": 350,
+          "bottom": 371
+        },
+        {
+          "pixels": 77895,
+          "left": 377,
+          "top": 28,
+          "right": 701,
+          "bottom": 371
+        },
+        {
+          "pixels": 78504,
+          "left": 725,
+          "top": 33,
+          "right": 1060,
+          "bottom": 371
+        },
+        {
+          "pixels": 77123,
+          "left": 1099,
+          "top": 28,
+          "right": 1418,
+          "bottom": 371
+        },
+        {
+          "pixels": 75204,
+          "left": 23,
+          "top": 396,
+          "right": 356,
+          "bottom": 725
+        },
+        {
+          "pixels": 77395,
+          "left": 376,
+          "top": 392,
+          "right": 710,
+          "bottom": 725
+        },
+        {
+          "pixels": 75255,
+          "left": 730,
+          "top": 397,
+          "right": 1062,
+          "bottom": 725
+        },
+        {
+          "pixels": 72657,
+          "left": 1103,
+          "top": 404,
+          "right": 1428,
+          "bottom": 725
+        },
+        {
+          "pixels": 75618,
+          "left": 22,
+          "top": 742,
+          "right": 356,
+          "bottom": 1069
+        },
+        {
+          "pixels": 74083,
+          "left": 379,
+          "top": 745,
+          "right": 712,
+          "bottom": 1069
+        },
+        {
+          "pixels": 74328,
+          "left": 727,
+          "top": 749,
+          "right": 1068,
+          "bottom": 1069
+        },
+        {
+          "pixels": 72979,
+          "left": 1099,
+          "top": 749,
+          "right": 1425,
+          "bottom": 1069
+        }
+      ]
+    }
+  ]
+}

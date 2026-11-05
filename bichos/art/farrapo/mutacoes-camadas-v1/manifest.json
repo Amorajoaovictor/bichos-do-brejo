@@ -1,0 +1,406 @@
+{
+  "character": "Farrapo",
+  "version": 1,
+  "integrated": false,
+  "format": "PNG transparente em peças sobrepostas",
+  "views": [
+    "right",
+    "left",
+    "down",
+    "up"
+  ],
+  "slots": [
+    "head",
+    "body",
+    "armR",
+    "armL",
+    "legR",
+    "legL",
+    "tail",
+    "fur"
+  ],
+  "assets": {
+    "base-right-head": {
+      "url": "pecas/base-right-head.png",
+      "width": 213,
+      "height": 303
+    },
+    "base-left-head": {
+      "url": "pecas/base-left-head.png",
+      "width": 210,
+      "height": 303
+    },
+    "base-down-head": {
+      "url": "pecas/base-down-head.png",
+      "width": 214,
+      "height": 303
+    },
+    "base-up-head": {
+      "url": "pecas/base-up-head.png",
+      "width": 217,
+      "height": 302
+    },
+    "base-right-body": {
+      "url": "pecas/base-right-body.png",
+      "width": 156,
+      "height": 199
+    },
+    "base-left-body": {
+      "url": "pecas/base-left-body.png",
+      "width": 154,
+      "height": 200
+    },
+    "base-down-body": {
+      "url": "pecas/base-down-body.png",
+      "width": 167,
+      "height": 200
+    },
+    "base-up-body": {
+      "url": "pecas/base-up-body.png",
+      "width": 163,
+      "height": 199
+    },
+    "base-right-armR": {
+      "url": "pecas/base-right-armR.png",
+      "width": 109,
+      "height": 136
+    },
+    "base-left-armR": {
+      "url": "pecas/base-left-armR.png",
+      "width": 95,
+      "height": 136
+    },
+    "base-down-armR": {
+      "url": "pecas/base-down-armR.png",
+      "width": 83,
+      "height": 142
+    },
+    "base-up-armR": {
+      "url": "pecas/base-up-armR.png",
+      "width": 87,
+      "height": 142
+    },
+    "base-right-armL": {
+      "url": "pecas/base-right-armL.png",
+      "width": 112,
+      "height": 124
+    },
+    "base-left-armL": {
+      "url": "pecas/base-left-armL.png",
+      "width": 107,
+      "height": 121
+    },
+    "base-down-armL": {
+      "url": "pecas/base-down-armL.png",
+      "width": 77,
+      "height": 139
+    },
+    "base-up-armL": {
+      "url": "pecas/base-up-armL.png",
+      "width": 77,
+      "height": 139
+    },
+    "base-right-legR": {
+      "url": "pecas/base-right-legR.png",
+      "width": 166,
+      "height": 183
+    },
+    "base-left-legR": {
+      "url": "pecas/base-left-legR.png",
+      "width": 164,
+      "height": 183
+    },
+    "base-down-legR": {
+      "url": "pecas/base-down-legR.png",
+      "width": 107,
+      "height": 178
+    },
+    "base-up-legR": {
+      "url": "pecas/base-up-legR.png",
+      "width": 115,
+      "height": 183
+    },
+    "base-right-legL": {
+      "url": "pecas/base-right-legL.png",
+      "width": 159,
+      "height": 183
+    },
+    "base-left-legL": {
+      "url": "pecas/base-left-legL.png",
+      "width": 141,
+      "height": 186
+    },
+    "base-down-legL": {
+      "url": "pecas/base-down-legL.png",
+      "width": 122,
+      "height": 185
+    },
+    "base-up-legL": {
+      "url": "pecas/base-up-legL.png",
+      "width": 139,
+      "height": 186
+    },
+    "base-right-tail": {
+      "url": "pecas/base-right-tail.png",
+      "width": 102,
+      "height": 109
+    },
+    "base-left-tail": {
+      "url": "pecas/base-left-tail.png",
+      "width": 101,
+      "height": 109
+    },
+    "base-down-tail": {
+      "url": "pecas/base-down-tail.png",
+      "width": 96,
+      "height": 102
+    },
+    "base-up-tail": {
+      "url": "pecas/base-up-tail.png",
+      "width": 111,
+      "height": 111
+    },
+    "mutation-right-horn": {
+      "url": "pecas/mutation-right-horn.png",
+      "width": 129,
+      "height": 152
+    },
+    "mutation-left-horn": {
+      "url": "pecas/mutation-left-horn.png",
+      "width": 123,
+      "height": 153
+    },
+    "mutation-down-horn": {
+      "url": "pecas/mutation-down-horn.png",
+      "width": 99,
+      "height": 143
+    },
+    "mutation-up-horn": {
+      "url": "pecas/mutation-up-horn.png",
+      "width": 101,
+      "height": 143
+    },
+    "mutation-right-body": {
+      "url": "pecas/mutation-right-body.png",
+      "width": 194,
+      "height": 220
+    },
+    "mutation-left-body": {
+      "url": "pecas/mutation-left-body.png",
+      "width": 188,
+      "height": 222
+    },
+    "mutation-down-body": {
+      "url": "pecas/mutation-down-body.png",
+      "width": 201,
+      "height": 219
+    },
+    "mutation-up-body": {
+      "url": "pecas/mutation-up-body.png",
+      "width": 202,
+      "height": 218
+    },
+    "mutation-right-armR": {
+      "url": "pecas/mutation-right-armR.png",
+      "width": 153,
+      "height": 180
+    },
+    "mutation-left-armR": {
+      "url": "pecas/mutation-left-armR.png",
+      "width": 149,
+      "height": 181
+    },
+    "mutation-down-armR": {
+      "url": "pecas/mutation-down-armR.png",
+      "width": 113,
+      "height": 181
+    },
+    "mutation-up-armR": {
+      "url": "pecas/mutation-up-armR.png",
+      "width": 106,
+      "height": 182
+    },
+    "mutation-right-armL": {
+      "url": "pecas/mutation-right-armL.png",
+      "width": 141,
+      "height": 172
+    },
+    "mutation-left-armL": {
+      "url": "pecas/mutation-left-armL.png",
+      "width": 142,
+      "height": 172
+    },
+    "mutation-down-armL": {
+      "url": "pecas/mutation-down-armL.png",
+      "width": 110,
+      "height": 173
+    },
+    "mutation-up-armL": {
+      "url": "pecas/mutation-up-armL.png",
+      "width": 108,
+      "height": 178
+    },
+    "mutation-right-legR": {
+      "url": "pecas/mutation-right-legR.png",
+      "width": 168,
+      "height": 211
+    },
+    "mutation-left-legR": {
+      "url": "pecas/mutation-left-legR.png",
+      "width": 167,
+      "height": 214
+    },
+    "mutation-down-legR": {
+      "url": "pecas/mutation-down-legR.png",
+      "width": 129,
+      "height": 215
+    },
+    "mutation-up-legR": {
+      "url": "pecas/mutation-up-legR.png",
+      "width": 136,
+      "height": 205
+    },
+    "mutation-right-legL": {
+      "url": "pecas/mutation-right-legL.png",
+      "width": 172,
+      "height": 217
+    },
+    "mutation-left-legL": {
+      "url": "pecas/mutation-left-legL.png",
+      "width": 163,
+      "height": 219
+    },
+    "mutation-down-legL": {
+      "url": "pecas/mutation-down-legL.png",
+      "width": 145,
+      "height": 219
+    },
+    "mutation-up-legL": {
+      "url": "pecas/mutation-up-legL.png",
+      "width": 141,
+      "height": 211
+    },
+    "mutation-right-tail": {
+      "url": "pecas/mutation-right-tail.png",
+      "width": 176,
+      "height": 155
+    },
+    "mutation-left-tail": {
+      "url": "pecas/mutation-left-tail.png",
+      "width": 172,
+      "height": 154
+    },
+    "mutation-down-tail": {
+      "url": "pecas/mutation-down-tail.png",
+      "width": 125,
+      "height": 144
+    },
+    "mutation-up-tail": {
+      "url": "pecas/mutation-up-tail.png",
+      "width": 149,
+      "height": 142
+    },
+    "expressions-right-panic": {
+      "url": "pecas/expressions-right-panic.png",
+      "width": 249,
+      "height": 312
+    },
+    "expressions-left-panic": {
+      "url": "pecas/expressions-left-panic.png",
+      "width": 252,
+      "height": 310
+    },
+    "expressions-down-panic": {
+      "url": "pecas/expressions-down-panic.png",
+      "width": 260,
+      "height": 311
+    },
+    "expressions-up-panic": {
+      "url": "pecas/expressions-up-panic.png",
+      "width": 252,
+      "height": 312
+    },
+    "expressions-right-strain": {
+      "url": "pecas/expressions-right-strain.png",
+      "width": 255,
+      "height": 281
+    },
+    "expressions-left-strain": {
+      "url": "pecas/expressions-left-strain.png",
+      "width": 261,
+      "height": 281
+    },
+    "expressions-down-strain": {
+      "url": "pecas/expressions-down-strain.png",
+      "width": 255,
+      "height": 283
+    },
+    "expressions-up-strain": {
+      "url": "pecas/expressions-up-strain.png",
+      "width": 251,
+      "height": 285
+    },
+    "expressions-right-relief": {
+      "url": "pecas/expressions-right-relief.png",
+      "width": 250,
+      "height": 294
+    },
+    "expressions-left-relief": {
+      "url": "pecas/expressions-left-relief.png",
+      "width": 251,
+      "height": 294
+    },
+    "expressions-down-relief": {
+      "url": "pecas/expressions-down-relief.png",
+      "width": 252,
+      "height": 293
+    },
+    "expressions-up-relief": {
+      "url": "pecas/expressions-up-relief.png",
+      "width": 253,
+      "height": 280
+    },
+    "expressions-right-defeat": {
+      "url": "pecas/expressions-right-defeat.png",
+      "width": 254,
+      "height": 278
+    },
+    "expressions-left-defeat": {
+      "url": "pecas/expressions-left-defeat.png",
+      "width": 254,
+      "height": 278
+    },
+    "expressions-down-defeat": {
+      "url": "pecas/expressions-down-defeat.png",
+      "width": 252,
+      "height": 280
+    },
+    "expressions-up-defeat": {
+      "url": "pecas/expressions-up-defeat.png",
+      "width": 253,
+      "height": 233
+    }
+  },
+  "actions": [
+    "idle",
+    "walk",
+    "rabbit",
+    "barrage",
+    "hit",
+    "bleed",
+    "death"
+  ],
+  "timing": {
+    "idle": 1.92,
+    "walk": 0.48,
+    "rabbit": 1.05,
+    "barrage": 2.3,
+    "relief": 1.8,
+    "hit": 0.52,
+    "bleed": 0.7,
+    "death": 1.15
+  },
+  "animation": "Peças PNG articuladas; estudo visual, não substitui as animações quadro a quadro do jogo.",
+  "generator": ".openai/build-rabbit-layers.mjs",
+  "viewer": "index.html"
+}

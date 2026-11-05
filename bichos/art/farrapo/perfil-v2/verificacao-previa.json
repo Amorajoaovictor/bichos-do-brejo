@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "transparentFrames": 96,
+  "clipped": [],
+  "checks": [
+    "preview pause, play and frame selection",
+    "all four preview actions",
+    "both anatomical sides",
+    "coice in game at all three speeds",
+    "game pause",
+    "barrage expression, mana and damage",
+    "six in-game screenshots"
+  ],
+  "browserErrors": []
+}

@@ -1,0 +1,138 @@
+{
+  "character": "Rosnaldo",
+  "action": "mordida",
+  "version": 1,
+  "design": "Grotesco com sangue e necrose; sem ossos expostos.",
+  "status": "Integrado ao jogo como animação PNG quadro a quadro nas quatro direções.",
+  "frameDurationMs": 100,
+  "frameCount": 12,
+  "columns": 4,
+  "rows": 3,
+  "events": {
+    "contactFrame": 7,
+    "release": 0.46,
+    "impact": 0.55
+  },
+  "directions": [
+    {
+      "direction": "direita",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          348,
+          317,
+          359
+        ],
+        "cols": [
+          350,
+          388,
+          402,
+          396,
+          442,
+          376,
+          364,
+          354,
+          365,
+          400,
+          383
+        ]
+      },
+      "frameSize": 442,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "esquerda",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          335,
+          317,
+          372
+        ],
+        "cols": [
+          363,
+          391,
+          393,
+          389,
+          379,
+          397,
+          377,
+          383,
+          362,
+          402,
+          387,
+          385
+        ]
+      },
+      "frameSize": 442,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "frente",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          342,
+          335,
+          347
+        ],
+        "cols": [
+          348,
+          385,
+          386,
+          417,
+          358,
+          390,
+          381,
+          407,
+          388,
+          379,
+          421
+        ]
+      },
+      "frameSize": 442,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "costas",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          349,
+          319,
+          356
+        ],
+        "cols": [
+          349,
+          407,
+          381,
+          399,
+          368,
+          412,
+          384,
+          372,
+          352,
+          388
+        ]
+      },
+      "frameSize": 442,
+      "alpha": true,
+      "frames": 12
+    }
+  ]
+}

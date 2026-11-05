@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "checks": [
+    "PNG único sem geometria do personagem vetorial",
+    "retratos em PNG",
+    "movimento próprio preservado e chegada exata",
+    "coice causa dano no contato",
+    "mana e contadores independentes",
+    "rajada com impactos por projétil",
+    "pausa e velocidades 0,5× e 1,5×",
+    "quatro vistas sem fallback vetorial",
+    "reação a dano",
+    "derrota mantida",
+    "reinício normal e durante rajada",
+    "encontro com esquilos",
+    "visualizador com as animações reais"
+  ],
+  "networkFailures": [],
+  "browserErrors": [],
+  "frames": 96
+}

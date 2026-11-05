@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "native": {
+    "meshes": 309,
+    "textured": 0,
+    "eyes": [
+      {
+        "direction": "right",
+        "visibleEyeHasPanic": true,
+        "farEyeHidden": true
+      },
+      {
+        "direction": "left",
+        "visibleEyeHasPanic": true,
+        "farEyeHidden": true
+      }
+    ]
+  },
+  "transparentFrames": 96,
+  "clipped": [],
+  "checks": [
+    "native vector meshes without raster maps",
+    "correct eye expression on each anatomical side",
+    "preview pause, play and frame selection",
+    "all four preview actions",
+    "both anatomical sides",
+    "coice in game at all three speeds",
+    "game pause",
+    "barrage expression, mana and damage",
+    "six in-game screenshots"
+  ],
+  "browserErrors": []
+}

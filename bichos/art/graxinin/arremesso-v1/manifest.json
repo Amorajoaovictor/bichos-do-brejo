@@ -1,0 +1,141 @@
+{
+  "character": "Graxinin",
+  "action": "throw",
+  "version": 1,
+  "design": "Guaxinim da referência do usuário; olhos assimétricos, cauda listrada e tampa nas costas.",
+  "status": "Prévia PNG para avaliação; personagem final em vetor, ainda não integrado.",
+  "frameDurationMs": 100,
+  "frameCount": 12,
+  "columns": 4,
+  "rows": 3,
+  "events": {
+    "releaseFrame": 7,
+    "releaseMs": 600,
+    "durationMs": 1200,
+    "projectile": "Separado do corpo após a soltura; não desenhado nesta prancha."
+  },
+  "directions": [
+    {
+      "direction": "direita",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "cells": {
+        "rows": [
+          336,
+          347,
+          403
+        ],
+        "cols": [
+          345,
+          348,
+          355,
+          400,
+          361,
+          374,
+          360,
+          353,
+          362,
+          363,
+          322,
+          401
+        ]
+      },
+      "frameSize": 512,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "esquerda",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "cells": {
+        "rows": [
+          331,
+          362,
+          393
+        ],
+        "cols": [
+          337,
+          359,
+          378,
+          374,
+          343,
+          379,
+          362,
+          364,
+          355,
+          356,
+          382
+        ]
+      },
+      "frameSize": 512,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "frente",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "cells": {
+        "rows": [
+          357,
+          334,
+          395
+        ],
+        "cols": [
+          323,
+          363,
+          349,
+          413,
+          342,
+          378,
+          348,
+          380,
+          304,
+          368,
+          360,
+          416
+        ]
+      },
+      "frameSize": 512,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "costas",
+      "sheet": [
+        1448,
+        1086
+      ],
+      "cells": {
+        "rows": [
+          328,
+          361,
+          397
+        ],
+        "cols": [
+          304,
+          362,
+          383,
+          399,
+          351,
+          366,
+          345,
+          386,
+          325,
+          352,
+          420
+        ]
+      },
+      "frameSize": 512,
+      "alpha": true,
+      "frames": 12
+    }
+  ]
+}

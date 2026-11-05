@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esquilo Histérico · repouso inquieto</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#272d22;color:#f0e6cf;font:16px system-ui}main{max-width:760px;margin:auto;padding:24px}
+  h1{font:italic 36px Georgia;margin:0}p{color:#ceccb3}a{color:#f1ce93}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-block:20px}
+  button,select{background:#414c35;color:inherit;border:1px solid #89936e;border-radius:4px;padding:8px;font:inherit}input{flex:1;min-width:100px;accent-color:#e3bc7b}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}figure{margin:0;background:#d1c8ab;color:#353726;border-radius:6px;overflow:hidden}
+  figcaption{padding:10px 14px;font-weight:650}figure div{position:relative;overflow:hidden;aspect-ratio:1.55}
+  figure div::before{content:'';position:absolute;left:34%;right:34%;bottom:12%;height:6%;border-radius:50%;background:#64563c37}
+  img{position:absolute;width:92%;left:4%;bottom:-5%}output{min-width:62px}
+</style>
+<main>
+  <h1>Repouso inquieto</h1>
+  <p>O esquilo vigia os dois lados, troca o apoio nas patas e acelera quando chega a vez dele.</p>
+  <div class="controls">
+    <button id="play" type="button">Pausar</button>
+    <input id="frame" type="range" min="0" value="0" aria-label="Quadro da animação">
+    <output id="count" for="frame"></output>
+    <select id="tempo" aria-label="Ritmo de repouso">
+      <option value=".5">Inspeção · 0,5×</option>
+      <option value="1" selected>Na fila</option>
+      <option value="1.22">Próximo da fila</option>
+      <option value="1.42">Vez do esquilo</option>
+    </select>
+  </div>
+  <div class="grid">
+    <figure><figcaption>Direita</figcaption><div><img data-view="right" alt="Esquilo visto de perfil para a direita"></div></figure>
+    <figure><figcaption>Esquerda</figcaption><div><img data-view="left" alt="Esquilo visto de perfil para a esquerda"></div></figure>
+    <figure><figcaption>Frente</figcaption><div><img data-view="down" alt="Esquilo visto de frente"></div></figure>
+    <figure><figcaption>Costas</figcaption><div><img data-view="up" alt="Esquilo visto de costas"></div></figure>
+  </div>
+  <p><a href="repouso-quatro-vistas.gif">Ver GIF</a></p>
+</main>
+<script src="previa-dados.js"></script>
+<script>
+  const exposure=window.idleExposure,views=[...document.querySelectorAll('[data-view]')];
+  const byId=id=>document.getElementById(id);
+  const frame=byId('frame'),play=byId('play'),tempo=byId('tempo'),count=byId('count');
+  let playing=true,elapsed=0,last=performance.now(),shown=-1;
+  const end=exposure.map(([,ms],i)=>ms+exposure.slice(0,i).reduce((sum,[,ms])=>sum+ms,0));
+  const duration=end.at(-1);
+  frame.max=exposure.length-1;
+  for(const image of views)for(const pose of new Set(exposure.map(([pose])=>pose)))new Image().src=`quadros/${image.dataset.view}-${pose}.png`;
+  function show(){
+    const i=end.findIndex(ms=>elapsed<ms);
+    if(i===shown)return;
+    shown=i;frame.value=i;count.value=`${i+1} / ${exposure.length}`;
+    for(const image of views)image.src=`quadros/${image.dataset.view}-${exposure[i][0]}.png`;
+  }
+  function setPlaying(value){playing=value;play.textContent=playing?'Pausar':'Reproduzir';}
+  play.onclick=()=>setPlaying(!playing);
+  frame.oninput=()=>{setPlaying(false);elapsed=end[Number(frame.value)-1]??0;show();};
+  function tick(now){
+    if(playing){elapsed=(elapsed+(now-last)*Number(tempo.value))%duration;show();}
+    last=now;requestAnimationFrame(tick);
+  }
+  show();requestAnimationFrame(tick);
+</script>
+</html>

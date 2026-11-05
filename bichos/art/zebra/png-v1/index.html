@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zebra · Bichos do Brejo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#242b22;color:#e5dbc2;font:16px system-ui}main{max-width:1000px;margin:auto;padding:28px}h1{font:italic 38px Georgia;margin-bottom:10px}a{color:#d5c493}p{line-height:1.6;color:#c2c5ae}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;position:sticky;top:0;background:#242b22;padding:15px 0;z-index:1}button,select{background:#465238;color:inherit;padding:9px;border:1px solid #89926b;font:inherit}input{max-width:150px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid figure{margin:0;background:#30382c;border:1px solid #525d47}.grid img{width:100%;display:block}.grid figcaption{text-align:center;padding-top:12px;color:#c7cbb2}.inspect{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.inspect img{width:180px;background:#30382c}@media(max-width:600px){main{padding:14px}.controls{gap:8px}h1{font-size:30px}}
+</style>
+<main>
+<a href="/">← Jogar</a><h1>Zebra</h1>
+<p>Companheira dos esquilos na clareira. 18 de vida · movimento até 3 casas · Coice: 5 de dano, alcance 1.</p>
+<div class="controls">
+<label>Ação <select id="action"><option value="idle">Repouso</option><option value="walk">Caminhada</option><option value="zebraKick" selected>Coice</option><option value="hit">Dano</option><option value="bleed">Sangramento</option><option value="death">Derrota</option></select></label>
+<button id="play">Pausar</button><label>Quadro <input id="frame" type="range" min="0" max="7" value="0"></label><output id="count"></output>
+<label>Velocidade <select id="speed"><option value=".5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label>
+<button id="restart">Recomeçar</button>
+</div>
+<div class="grid">
+<figure><figcaption>Direita</figcaption><img data-view="right" src="quadros/right-0.png" alt="Zebra de perfil direito"></figure>
+<figure><figcaption>Esquerda</figcaption><img data-view="left" src="quadros/left-0.png" alt="Zebra de perfil esquerdo"></figure>
+<figure><figcaption>Frente</figcaption><img data-view="down" src="quadros/down-0.png" alt="Zebra de frente"></figure>
+<figure><figcaption>Costas</figcaption><img data-view="up" src="quadros/up-0.png" alt="Zebra de costas"></figure>
+</div>
+<p id="note">O coice usa as patas traseiras. No jogo, a zebra vira a garupa para o alvo e causa dano no contato.</p>
+<details><summary>Inspecionar os nove desenhos de cada vista</summary><div class="controls"><label>Desenho <select id="pose"></select></label></div><div class="inspect" id="drawings"></div></details>
+<p><a href="zebraKick.gif">GIF do coice</a> · <a href="animacoes-quatro-direcoes.gif">Todas as animações</a> · <a href="../referencia-do-usuario.png">Referência original</a></p>
+</main>
+<script type="module">
+import {ZEBRA_VIEWS,ZEBRA_SEQUENCES,ZEBRA_DURATIONS,ZEBRA_IMPACT,zebraPose} from '/zebra-png-frames.js';
+const $=id=>document.getElementById(id),action=$('action'),frame=$('frame'),play=$('play');
+const cache=await Promise.all(ZEBRA_VIEWS.flatMap(view=>Array.from({length:9},(_,i)=>new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(img);img.src=`quadros/${view}-${i}.png`;}))));
+let playing=true,elapsed=0,index=0,last=performance.now(),lastPose=-1;
+function show(){const seq=ZEBRA_SEQUENCES[action.value],pose=seq[index];frame.max=seq.length-1;frame.value=index;$('count').textContent=`${index+1} / ${seq.length}`;if(pose!==lastPose){for(const img of document.querySelectorAll('.grid img'))img.src=`quadros/${img.dataset.view}-${pose}.png`;lastPose=pose;}$('note').textContent=action.value==='death'?'A derrota mantém o último desenho até recomeçar.':action.value==='zebraKick'?`Coice com as patas traseiras. O dano acontece em ${Math.round(ZEBRA_IMPACT*100)}% da ação, durante a extensão dos cascos.`:'As quatro vistas usam os mesmos quadros e tempos do jogo.';}
+function setPlaying(value){playing=value;play.textContent=value?'Pausar':'Reproduzir';}
+play.onclick=()=>{if(!playing&&action.value==='death'&&elapsed>=ZEBRA_DURATIONS.death)elapsed=0;setPlaying(!playing);};
+$('restart').onclick=()=>{elapsed=0;index=0;setPlaying(true);show();};
+action.onchange=()=>{elapsed=0;index=0;show();};
+frame.oninput=()=>{setPlaying(false);index=+frame.value;elapsed=index/ZEBRA_SEQUENCES[action.value].length*ZEBRA_DURATIONS[action.value];show();};
+const names=['Repouso','Respiração','Passada A','Passada B','Preparação do coice','Extensão do coice','Dano','Queda','Derrota'];
+$('pose').innerHTML=names.map((name,i)=>`<option value="${i}">${i+1} · ${name}</option>`).join('');
+function inspect(){$('drawings').innerHTML=ZEBRA_VIEWS.map((view,i)=>`<img src="quadros/${view}-${$('pose').value}.png" alt="${['Direita','Esquerda','Frente','Costas'][i]}, ${names[+$('pose').value]}">`).join('');}
+$('pose').onchange=inspect;inspect();
+function tick(now){if(playing){const duration=ZEBRA_DURATIONS[action.value],seq=ZEBRA_SEQUENCES[action.value];elapsed+=(now-last)/1000*+$('speed').value;if(action.value==='death'&&elapsed>=duration){elapsed=duration;setPlaying(false);}index=Math.min(seq.length-1,Math.floor((action.value==='death'?elapsed:elapsed%duration)/duration*seq.length));show();}last=now;requestAnimationFrame(tick);}show();requestAnimationFrame(tick);
+</script>
+</html>

@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+
+# Capturas e perfis locais das verificações no navegador.
+/bichos/.openai/*-review/
+/bichos/.openai/chrome-animation-profile/
+/bichos/.openai/rabbit-face-browser/

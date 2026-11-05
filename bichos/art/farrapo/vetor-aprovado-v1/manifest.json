@@ -1,0 +1,58 @@
+{
+  "character": "Farrapo",
+  "version": 3,
+  "directions": [
+    "right",
+    "left",
+    "down",
+    "up"
+  ],
+  "selectedAngle": "profile",
+  "framesPerAction": {
+    "repouso": 12,
+    "salto": 12,
+    "coice": 12,
+    "rajada": 70
+  },
+  "frameSize": [
+    330,
+    450
+  ],
+  "actions": {
+    "repouso": {
+      "kind": "idle",
+      "duration": 2400
+    },
+    "salto": {
+      "kind": "jump",
+      "duration": 480
+    },
+    "coice": {
+      "kind": "rabbit",
+      "duration": 1050
+    },
+    "rajada": {
+      "kind": "barrage",
+      "duration": 2300,
+      "frameCount": 70
+    }
+  },
+  "events": {
+    "coice": {
+      "release": 0.43,
+      "impact": 0.48
+    },
+    "rajada": {
+      "release": 0.18,
+      "impact": 0.84
+    }
+  },
+  "source": "dist/rabbit-approved-art.js",
+  "integration": "articulated-vector",
+  "approvedReferences": [
+    "../postura-original-v1/perfil-aprovado.png",
+    "../postura-original-v1/tres-quartos-aprovado.png"
+  ],
+  "notes": "Perfil completo escolhido pelo usuário. PNGs e GIFs são prévias renderizadas das articulações; o jogo usa apenas geometria vetorial do Farrapo. Três quartos preservado como estudo SVG.",
+  "barrageRevision": 2
+}

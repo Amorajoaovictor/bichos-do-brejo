@@ -1,0 +1,10 @@
+[
+  {
+    "folder": "arremesso-v1",
+    "title": "Arremesso de lata · estudo de movimento",
+    "action": "throw",
+    "frameDurationMs": 100,
+    "status": "Prévia PNG para avaliação; personagem final em vetor, ainda não integrado.",
+    "events": {"releaseFrame": 7, "releaseMs": 600, "durationMs": 1200, "projectile": "Separado do corpo após a soltura; não desenhado nesta prancha."}
+  }
+]

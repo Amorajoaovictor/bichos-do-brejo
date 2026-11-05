@@ -1,0 +1,136 @@
+{
+  "character": "Rosnaldo",
+  "action": "derrota",
+  "version": 1,
+  "design": "Grotesco com sangue e necrose; sem ossos expostos.",
+  "status": "Integrado ao jogo como animação PNG quadro a quadro nas quatro direções.",
+  "frameDurationMs": 120,
+  "frameCount": 12,
+  "columns": 4,
+  "rows": 3,
+  "events": {
+    "groundFrame": 6,
+    "holdFrame": 12
+  },
+  "directions": [
+    {
+      "direction": "direita",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          394,
+          323,
+          307
+        ],
+        "cols": [
+          355,
+          384,
+          381,
+          416,
+          361,
+          392,
+          399,
+          382,
+          387,
+          380
+        ]
+      },
+      "frameSize": 416,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "esquerda",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          380,
+          335,
+          309
+        ],
+        "cols": [
+          382,
+          365,
+          396,
+          393,
+          384,
+          357,
+          411,
+          380,
+          377,
+          399
+        ]
+      },
+      "frameSize": 416,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "frente",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          372,
+          356,
+          296
+        ],
+        "cols": [
+          349,
+          382,
+          390,
+          415,
+          371,
+          393,
+          373,
+          399,
+          388,
+          383,
+          374,
+          391
+        ]
+      },
+      "frameSize": 416,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "costas",
+      "sheet": [
+        1536,
+        1024
+      ],
+      "cells": {
+        "rows": [
+          385,
+          339,
+          300
+        ],
+        "cols": [
+          329,
+          385,
+          396,
+          426,
+          344,
+          404,
+          383,
+          405,
+          376,
+          384,
+          391
+        ]
+      },
+      "frameSize": 426,
+      "alpha": true,
+      "frames": 12
+    }
+  ]
+}

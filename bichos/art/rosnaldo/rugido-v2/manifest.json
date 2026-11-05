@@ -1,0 +1,42 @@
+{
+  "character": "Rosnaldo",
+  "action": "rugido",
+  "version": 2,
+  "design": "Grotesco com sangue e necrose; sem ossos expostos.",
+  "status": "Integrado ao jogo como animação PNG quadro a quadro nas quatro direções.",
+  "events": { "release": 0.47, "impact": 0.55, "contactFrame": 7 },
+  "frameDurationMs": 150,
+  "frameCount": 12,
+  "columns": 4,
+  "rows": 3,
+  "directions": [
+    {
+      "direction": "direita",
+      "width": 1448,
+      "height": 1086,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "esquerda",
+      "width": 1448,
+      "height": 1086,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "frente",
+      "width": 1448,
+      "height": 1086,
+      "alpha": true,
+      "frames": 12
+    },
+    {
+      "direction": "costas",
+      "width": 1448,
+      "height": 1086,
+      "alpha": true,
+      "frames": 12
+    }
+  ]
+}

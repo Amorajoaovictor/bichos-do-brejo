@@ -1,0 +1,60 @@
+{
+  "integrated": true,
+  "format": "PNG com transparência",
+  "assets": [
+    "rock.png",
+    "log.png"
+  ],
+  "originals": [
+    "rock-original.png",
+    "log-original.png"
+  ],
+  "generation": "image_gen integrado",
+  "animation": "Sprites estáticos completos; deslocamento, arco e giro na cena. Prévia capturada do combate real, não prancha de redesenhos.",
+  "preview": {
+    "frames": 15,
+    "delays": [
+      500,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      900
+    ],
+    "width": 720,
+    "height": 520
+  },
+  "rules": {
+    "bonusPerTurn": 1,
+    "rocks": 4,
+    "logs": 2,
+    "stone": {
+      "damage": 4,
+      "range": 3
+    },
+    "log": {
+      "damage": 8,
+      "range": 4,
+      "perEnemyHits": 1,
+      "consumedAfterUse": true
+    },
+    "graxinin": {
+      "carriedAtStart": "Lata amassada",
+      "capacity": 1,
+      "pickupCosts": "1 bônus",
+      "throwCosts": "1 ataque",
+      "damage": 8,
+      "range": 4
+    }
+  },
+  "verification": "../../../.openai/environment-review/report.json"
+}

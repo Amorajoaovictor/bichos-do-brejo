@@ -1,0 +1,1729 @@
+{
+  "character": "Leãozinho",
+  "format": "PNG transparente",
+  "integrated": true,
+  "views": [
+    "right",
+    "left",
+    "down",
+    "up"
+  ],
+  "poses": [
+    "idle",
+    "breathe",
+    "walkA",
+    "walkB",
+    "biteprep",
+    "bitecontact",
+    "hurt",
+    "fall",
+    "death"
+  ],
+  "posesPerView": 9,
+  "frames": 36,
+  "frameSize": 512,
+  "sequences": {
+    "idle": [
+      0,
+      1,
+      0
+    ],
+    "walk": [
+      2,
+      3,
+      2,
+      3
+    ],
+    "bite": [
+      0,
+      4,
+      5,
+      4,
+      0
+    ],
+    "hit": [
+      6,
+      6,
+      0
+    ],
+    "bleed": [
+      6,
+      0
+    ],
+    "death": [
+      6,
+      7,
+      8
+    ],
+    "summon": [
+      0,
+      1,
+      0
+    ]
+  },
+  "aliases": {
+    "cubBite": "bite",
+    "spawn": "summon",
+    "hurt": "hit"
+  },
+  "stops": {
+    "idle": [
+      0,
+      0.3,
+      0.7
+    ],
+    "walk": [
+      0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "bite": [
+      0,
+      0.14,
+      0.56,
+      0.76,
+      0.9
+    ],
+    "hit": [
+      0,
+      0.35,
+      0.8
+    ],
+    "bleed": [
+      0,
+      0.75
+    ],
+    "death": [
+      0,
+      0.23,
+      0.68
+    ],
+    "summon": [
+      0,
+      0.4,
+      0.8
+    ]
+  },
+  "timing": {
+    "idle": 0.9,
+    "walk": 0.36,
+    "bite": 0.85,
+    "cubBite": 0.85,
+    "hit": 0.52,
+    "bleed": 0.7,
+    "death": 1.05,
+    "summon": 0.45,
+    "spawn": 0.45,
+    "impact": 0.56
+  },
+  "events": {
+    "bite": {
+      "impact": 0.56
+    },
+    "cubBite": {
+      "impact": 0.56
+    }
+  },
+  "eventUnits": "normalized progress; bite impact at 0.476 seconds",
+  "loop": {
+    "idle": true,
+    "walk": true,
+    "bite": true,
+    "hit": true,
+    "bleed": true,
+    "death": false,
+    "summon": false
+  },
+  "layout": {
+    "size": 512,
+    "ground": 452,
+    "margin": 24,
+    "spriteSize": 1.45
+  },
+  "uniformScale": 1.2073490813648293,
+  "sourceSheets": [
+    "movimentos.png",
+    "reacoes.png"
+  ],
+  "cuts": {
+    "motion": {
+      "columns": {
+        "mode": "gutters",
+        "bands": [
+          [
+            45,
+            338
+          ],
+          [
+            415,
+            729
+          ],
+          [
+            763,
+            1021
+          ],
+          [
+            1097,
+            1373
+          ]
+        ],
+        "cells": [
+          [
+            0,
+            376
+          ],
+          [
+            376,
+            746
+          ],
+          [
+            746,
+            1059
+          ],
+          [
+            1059,
+            1402
+          ]
+        ]
+      },
+      "rowsByView": [
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              14,
+              244
+            ],
+            [
+              251,
+              485
+            ],
+            [
+              498,
+              707
+            ],
+            [
+              722,
+              929
+            ],
+            [
+              934,
+              1112
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              247
+            ],
+            [
+              247,
+              491
+            ],
+            [
+              491,
+              714
+            ],
+            [
+              714,
+              931
+            ],
+            [
+              931,
+              1122
+            ]
+          ]
+        },
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              14,
+              244
+            ],
+            [
+              251,
+              485
+            ],
+            [
+              498,
+              707
+            ],
+            [
+              722,
+              929
+            ],
+            [
+              933,
+              1113
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              247
+            ],
+            [
+              247,
+              491
+            ],
+            [
+              491,
+              714
+            ],
+            [
+              714,
+              931
+            ],
+            [
+              931,
+              1122
+            ]
+          ]
+        },
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              11,
+              244
+            ],
+            [
+              249,
+              487
+            ],
+            [
+              495,
+              714
+            ],
+            [
+              719,
+              930
+            ],
+            [
+              934,
+              1110
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              246
+            ],
+            [
+              246,
+              491
+            ],
+            [
+              491,
+              716
+            ],
+            [
+              716,
+              932
+            ],
+            [
+              932,
+              1122
+            ]
+          ]
+        },
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              12,
+              244
+            ],
+            [
+              253,
+              486
+            ],
+            [
+              496,
+              714
+            ],
+            [
+              719,
+              928
+            ],
+            [
+              932,
+              1113
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              248
+            ],
+            [
+              248,
+              491
+            ],
+            [
+              491,
+              716
+            ],
+            [
+              716,
+              930
+            ],
+            [
+              930,
+              1122
+            ]
+          ]
+        }
+      ]
+    },
+    "reactions": {
+      "columns": {
+        "mode": "gutters",
+        "bands": [
+          [
+            11,
+            352
+          ],
+          [
+            388,
+            760
+          ],
+          [
+            774,
+            1041
+          ],
+          [
+            1083,
+            1392
+          ]
+        ],
+        "cells": [
+          [
+            0,
+            370
+          ],
+          [
+            370,
+            767
+          ],
+          [
+            767,
+            1062
+          ],
+          [
+            1062,
+            1402
+          ]
+        ]
+      },
+      "rowsByView": [
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              106,
+              324
+            ],
+            [
+              335,
+              585
+            ],
+            [
+              631,
+              816
+            ],
+            [
+              886,
+              1051
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              329
+            ],
+            [
+              329,
+              608
+            ],
+            [
+              608,
+              851
+            ],
+            [
+              851,
+              1122
+            ]
+          ]
+        },
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              105,
+              326
+            ],
+            [
+              333,
+              591
+            ],
+            [
+              626,
+              811
+            ],
+            [
+              887,
+              1051
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              329
+            ],
+            [
+              329,
+              608
+            ],
+            [
+              608,
+              849
+            ],
+            [
+              849,
+              1122
+            ]
+          ]
+        },
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              120,
+              331
+            ],
+            [
+              339,
+              588
+            ],
+            [
+              631,
+              808
+            ],
+            [
+              890,
+              1055
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              335
+            ],
+            [
+              335,
+              609
+            ],
+            [
+              609,
+              849
+            ],
+            [
+              849,
+              1122
+            ]
+          ]
+        },
+        {
+          "mode": "gutters",
+          "bands": [
+            [
+              110,
+              322
+            ],
+            [
+              345,
+              586
+            ],
+            [
+              633,
+              819
+            ],
+            [
+              883,
+              1051
+            ]
+          ],
+          "cells": [
+            [
+              0,
+              333
+            ],
+            [
+              333,
+              609
+            ],
+            [
+              609,
+              851
+            ],
+            [
+              851,
+              1122
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "anchors": {
+    "motion": [
+      191.5,
+      576.5,
+      887.5,
+      1239
+    ],
+    "reactions": [
+      181.5,
+      576.5,
+      918.5,
+      1248
+    ]
+  },
+  "frameBounds": [
+    {
+      "view": "right",
+      "pose": 0,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 58,
+        "top": 12,
+        "width": 282,
+        "height": 234
+      },
+      "sourceBounds": {
+        "left": 60,
+        "top": 14,
+        "right": 338,
+        "bottom": 244
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 0,
+        "right": 376,
+        "bottom": 247
+      },
+      "anchorX": 191.5,
+      "scale": 1.2073490813648293,
+      "left": 95,
+      "top": 170,
+      "width": 340,
+      "height": 282,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 0,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 438,
+        "top": 12,
+        "width": 282,
+        "height": 234
+      },
+      "sourceBounds": {
+        "left": 440,
+        "top": 14,
+        "right": 718,
+        "bottom": 244
+      },
+      "sourceCell": {
+        "left": 376,
+        "top": 0,
+        "right": 746,
+        "bottom": 247
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 89,
+      "top": 170,
+      "width": 340,
+      "height": 282,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 0,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 772,
+        "top": 9,
+        "width": 210,
+        "height": 237
+      },
+      "sourceBounds": {
+        "left": 774,
+        "top": 11,
+        "right": 980,
+        "bottom": 244
+      },
+      "sourceCell": {
+        "left": 746,
+        "top": 0,
+        "right": 1059,
+        "bottom": 246
+      },
+      "anchorX": 887.5,
+      "scale": 1.2073490813648293,
+      "left": 117,
+      "top": 165,
+      "width": 254,
+      "height": 287,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 0,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 1112,
+        "top": 10,
+        "width": 246,
+        "height": 236
+      },
+      "sourceBounds": {
+        "left": 1114,
+        "top": 12,
+        "right": 1356,
+        "bottom": 244
+      },
+      "sourceCell": {
+        "left": 1059,
+        "top": 0,
+        "right": 1402,
+        "bottom": 248
+      },
+      "anchorX": 1239,
+      "scale": 1.2073490813648293,
+      "left": 103,
+      "top": 167,
+      "width": 297,
+      "height": 285,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 1,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 64,
+        "top": 249,
+        "width": 275,
+        "height": 238
+      },
+      "sourceBounds": {
+        "left": 66,
+        "top": 251,
+        "right": 337,
+        "bottom": 485
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 247,
+        "right": 376,
+        "bottom": 491
+      },
+      "anchorX": 191.5,
+      "scale": 1.2073490813648293,
+      "left": 102,
+      "top": 165,
+      "width": 332,
+      "height": 287,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 1,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 437,
+        "top": 249,
+        "width": 287,
+        "height": 238
+      },
+      "sourceBounds": {
+        "left": 439,
+        "top": 251,
+        "right": 722,
+        "bottom": 485
+      },
+      "sourceCell": {
+        "left": 376,
+        "top": 247,
+        "right": 746,
+        "bottom": 491
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 88,
+      "top": 164,
+      "width": 347,
+      "height": 288,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 1,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 772,
+        "top": 247,
+        "width": 209,
+        "height": 242
+      },
+      "sourceBounds": {
+        "left": 774,
+        "top": 249,
+        "right": 979,
+        "bottom": 487
+      },
+      "sourceCell": {
+        "left": 746,
+        "top": 246,
+        "right": 1059,
+        "bottom": 491
+      },
+      "anchorX": 887.5,
+      "scale": 1.2073490813648293,
+      "left": 117,
+      "top": 160,
+      "width": 252,
+      "height": 292,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 1,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 1112,
+        "top": 251,
+        "width": 257,
+        "height": 237
+      },
+      "sourceBounds": {
+        "left": 1114,
+        "top": 253,
+        "right": 1367,
+        "bottom": 486
+      },
+      "sourceCell": {
+        "left": 1059,
+        "top": 248,
+        "right": 1402,
+        "bottom": 491
+      },
+      "anchorX": 1239,
+      "scale": 1.2073490813648293,
+      "left": 103,
+      "top": 166,
+      "width": 310,
+      "height": 286,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 2,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 43,
+        "top": 496,
+        "width": 292,
+        "height": 213
+      },
+      "sourceBounds": {
+        "left": 45,
+        "top": 498,
+        "right": 333,
+        "bottom": 707
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 491,
+        "right": 376,
+        "bottom": 714
+      },
+      "anchorX": 191.5,
+      "scale": 1.2073490813648293,
+      "left": 77,
+      "top": 195,
+      "width": 353,
+      "height": 257,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 2,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 422,
+        "top": 496,
+        "width": 309,
+        "height": 213
+      },
+      "sourceBounds": {
+        "left": 424,
+        "top": 498,
+        "right": 729,
+        "bottom": 707
+      },
+      "sourceCell": {
+        "left": 376,
+        "top": 491,
+        "right": 746,
+        "bottom": 714
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 69,
+      "top": 195,
+      "width": 373,
+      "height": 257,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 2,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 786,
+        "top": 493,
+        "width": 203,
+        "height": 223
+      },
+      "sourceBounds": {
+        "left": 788,
+        "top": 495,
+        "right": 987,
+        "bottom": 714
+      },
+      "sourceCell": {
+        "left": 746,
+        "top": 491,
+        "right": 1059,
+        "bottom": 716
+      },
+      "anchorX": 887.5,
+      "scale": 1.2073490813648293,
+      "left": 133,
+      "top": 183,
+      "width": 245,
+      "height": 269,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 2,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 1112,
+        "top": 494,
+        "width": 263,
+        "height": 222
+      },
+      "sourceBounds": {
+        "left": 1114,
+        "top": 496,
+        "right": 1373,
+        "bottom": 714
+      },
+      "sourceCell": {
+        "left": 1059,
+        "top": 491,
+        "right": 1402,
+        "bottom": 716
+      },
+      "anchorX": 1239,
+      "scale": 1.2073490813648293,
+      "left": 103,
+      "top": 184,
+      "width": 318,
+      "height": 268,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 3,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 45,
+        "top": 720,
+        "width": 290,
+        "height": 211
+      },
+      "sourceBounds": {
+        "left": 47,
+        "top": 722,
+        "right": 333,
+        "bottom": 929
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 714,
+        "right": 376,
+        "bottom": 931
+      },
+      "anchorX": 191.5,
+      "scale": 1.2073490813648293,
+      "left": 79,
+      "top": 197,
+      "width": 350,
+      "height": 255,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 3,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 428,
+        "top": 720,
+        "width": 296,
+        "height": 211
+      },
+      "sourceBounds": {
+        "left": 430,
+        "top": 722,
+        "right": 722,
+        "bottom": 929
+      },
+      "sourceCell": {
+        "left": 376,
+        "top": 714,
+        "right": 746,
+        "bottom": 931
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 77,
+      "top": 198,
+      "width": 357,
+      "height": 254,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 3,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 786,
+        "top": 717,
+        "width": 208,
+        "height": 215
+      },
+      "sourceBounds": {
+        "left": 788,
+        "top": 719,
+        "right": 992,
+        "bottom": 930
+      },
+      "sourceCell": {
+        "left": 746,
+        "top": 716,
+        "right": 1059,
+        "bottom": 932
+      },
+      "anchorX": 887.5,
+      "scale": 1.2073490813648293,
+      "left": 133,
+      "top": 193,
+      "width": 251,
+      "height": 259,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 3,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 1112,
+        "top": 717,
+        "width": 254,
+        "height": 213
+      },
+      "sourceBounds": {
+        "left": 1114,
+        "top": 719,
+        "right": 1364,
+        "bottom": 928
+      },
+      "sourceCell": {
+        "left": 1059,
+        "top": 716,
+        "right": 1402,
+        "bottom": 930
+      },
+      "anchorX": 1239,
+      "scale": 1.2073490813648293,
+      "left": 103,
+      "top": 195,
+      "width": 307,
+      "height": 257,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 4,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 43,
+        "top": 932,
+        "width": 297,
+        "height": 182
+      },
+      "sourceBounds": {
+        "left": 45,
+        "top": 934,
+        "right": 338,
+        "bottom": 1112
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 931,
+        "right": 376,
+        "bottom": 1122
+      },
+      "anchorX": 191.5,
+      "scale": 1.2073490813648293,
+      "left": 77,
+      "top": 232,
+      "width": 359,
+      "height": 220,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 4,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 413,
+        "top": 931,
+        "width": 305,
+        "height": 184
+      },
+      "sourceBounds": {
+        "left": 415,
+        "top": 933,
+        "right": 716,
+        "bottom": 1113
+      },
+      "sourceCell": {
+        "left": 376,
+        "top": 931,
+        "right": 746,
+        "bottom": 1122
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 59,
+      "top": 230,
+      "width": 368,
+      "height": 222,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 4,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 761,
+        "top": 932,
+        "width": 262,
+        "height": 180
+      },
+      "sourceBounds": {
+        "left": 763,
+        "top": 934,
+        "right": 1021,
+        "bottom": 1110
+      },
+      "sourceCell": {
+        "left": 746,
+        "top": 932,
+        "right": 1059,
+        "bottom": 1122
+      },
+      "anchorX": 887.5,
+      "scale": 1.2073490813648293,
+      "left": 103,
+      "top": 235,
+      "width": 316,
+      "height": 217,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 4,
+      "sheet": "movimentos.png",
+      "sourceCrop": {
+        "left": 1095,
+        "top": 930,
+        "width": 271,
+        "height": 185
+      },
+      "sourceBounds": {
+        "left": 1097,
+        "top": 932,
+        "right": 1364,
+        "bottom": 1113
+      },
+      "sourceCell": {
+        "left": 1059,
+        "top": 930,
+        "right": 1402,
+        "bottom": 1122
+      },
+      "anchorX": 1239,
+      "scale": 1.2073490813648293,
+      "left": 82,
+      "top": 229,
+      "width": 327,
+      "height": 223,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 5,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 15,
+        "top": 104,
+        "width": 330,
+        "height": 222
+      },
+      "sourceBounds": {
+        "left": 17,
+        "top": 106,
+        "right": 343,
+        "bottom": 324
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 0,
+        "right": 370,
+        "bottom": 329
+      },
+      "anchorX": 181.5,
+      "scale": 1.2073490813648293,
+      "left": 55,
+      "top": 184,
+      "width": 398,
+      "height": 268,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 5,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 398,
+        "top": 103,
+        "width": 349,
+        "height": 225
+      },
+      "sourceBounds": {
+        "left": 400,
+        "top": 105,
+        "right": 745,
+        "bottom": 326
+      },
+      "sourceCell": {
+        "left": 370,
+        "top": 0,
+        "right": 767,
+        "bottom": 329
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 40,
+      "top": 181,
+      "width": 421,
+      "height": 271,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 5,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 802,
+        "top": 118,
+        "width": 241,
+        "height": 215
+      },
+      "sourceBounds": {
+        "left": 804,
+        "top": 120,
+        "right": 1041,
+        "bottom": 331
+      },
+      "sourceCell": {
+        "left": 767,
+        "top": 0,
+        "right": 1062,
+        "bottom": 335
+      },
+      "anchorX": 918.5,
+      "scale": 1.2073490813648293,
+      "left": 115,
+      "top": 192,
+      "width": 291,
+      "height": 260,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 5,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 1095,
+        "top": 108,
+        "width": 279,
+        "height": 216
+      },
+      "sourceBounds": {
+        "left": 1097,
+        "top": 110,
+        "right": 1372,
+        "bottom": 322
+      },
+      "sourceCell": {
+        "left": 1062,
+        "top": 0,
+        "right": 1402,
+        "bottom": 333
+      },
+      "anchorX": 1248,
+      "scale": 1.2073490813648293,
+      "left": 71,
+      "top": 191,
+      "width": 337,
+      "height": 261,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 6,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 17,
+        "top": 333,
+        "width": 309,
+        "height": 254
+      },
+      "sourceBounds": {
+        "left": 19,
+        "top": 335,
+        "right": 324,
+        "bottom": 585
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 329,
+        "right": 370,
+        "bottom": 608
+      },
+      "anchorX": 181.5,
+      "scale": 1.2073490813648293,
+      "left": 57,
+      "top": 145,
+      "width": 373,
+      "height": 307,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 6,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 440,
+        "top": 331,
+        "width": 296,
+        "height": 262
+      },
+      "sourceBounds": {
+        "left": 442,
+        "top": 333,
+        "right": 734,
+        "bottom": 591
+      },
+      "sourceCell": {
+        "left": 370,
+        "top": 329,
+        "right": 767,
+        "bottom": 608
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 91,
+      "top": 136,
+      "width": 357,
+      "height": 316,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 6,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 805,
+        "top": 337,
+        "width": 227,
+        "height": 253
+      },
+      "sourceBounds": {
+        "left": 807,
+        "top": 339,
+        "right": 1030,
+        "bottom": 588
+      },
+      "sourceCell": {
+        "left": 767,
+        "top": 335,
+        "right": 1062,
+        "bottom": 609
+      },
+      "anchorX": 918.5,
+      "scale": 1.2073490813648293,
+      "left": 119,
+      "top": 147,
+      "width": 274,
+      "height": 305,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 6,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 1119,
+        "top": 343,
+        "width": 275,
+        "height": 245
+      },
+      "sourceBounds": {
+        "left": 1121,
+        "top": 345,
+        "right": 1392,
+        "bottom": 586
+      },
+      "sourceCell": {
+        "left": 1062,
+        "top": 333,
+        "right": 1402,
+        "bottom": 609
+      },
+      "anchorX": 1248,
+      "scale": 1.2073490813648293,
+      "left": 100,
+      "top": 156,
+      "width": 332,
+      "height": 296,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 7,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 14,
+        "top": 628,
+        "width": 337,
+        "height": 190
+      },
+      "sourceBounds": {
+        "left": 16,
+        "top": 630,
+        "right": 349,
+        "bottom": 816
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 608,
+        "right": 370,
+        "bottom": 851
+      },
+      "anchorX": 181.5,
+      "scale": 1.2073490813648293,
+      "left": 54,
+      "top": 223,
+      "width": 407,
+      "height": 229,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 7,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 398,
+        "top": 624,
+        "width": 357,
+        "height": 189
+      },
+      "sourceBounds": {
+        "left": 400,
+        "top": 626,
+        "right": 753,
+        "bottom": 811
+      },
+      "sourceCell": {
+        "left": 370,
+        "top": 608,
+        "right": 767,
+        "bottom": 849
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 40,
+      "top": 224,
+      "width": 431,
+      "height": 228,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 7,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 774,
+        "top": 629,
+        "width": 264,
+        "height": 181
+      },
+      "sourceBounds": {
+        "left": 776,
+        "top": 631,
+        "right": 1036,
+        "bottom": 808
+      },
+      "sourceCell": {
+        "left": 767,
+        "top": 609,
+        "right": 1062,
+        "bottom": 849
+      },
+      "anchorX": 918.5,
+      "scale": 1.2073490813648293,
+      "left": 82,
+      "top": 233,
+      "width": 319,
+      "height": 219,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 7,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 1117,
+        "top": 631,
+        "width": 262,
+        "height": 190
+      },
+      "sourceBounds": {
+        "left": 1119,
+        "top": 633,
+        "right": 1377,
+        "bottom": 819
+      },
+      "sourceCell": {
+        "left": 1062,
+        "top": 609,
+        "right": 1402,
+        "bottom": 851
+      },
+      "anchorX": 1248,
+      "scale": 1.2073490813648293,
+      "left": 98,
+      "top": 223,
+      "width": 316,
+      "height": 229,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "right",
+      "pose": 8,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 9,
+        "top": 884,
+        "width": 345,
+        "height": 169
+      },
+      "sourceBounds": {
+        "left": 11,
+        "top": 886,
+        "right": 352,
+        "bottom": 1051
+      },
+      "sourceCell": {
+        "left": 0,
+        "top": 851,
+        "right": 370,
+        "bottom": 1122
+      },
+      "anchorX": 181.5,
+      "scale": 1.2073490813648293,
+      "left": 48,
+      "top": 248,
+      "width": 417,
+      "height": 204,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "left",
+      "pose": 8,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 386,
+        "top": 885,
+        "width": 376,
+        "height": 168
+      },
+      "sourceBounds": {
+        "left": 388,
+        "top": 887,
+        "right": 760,
+        "bottom": 1051
+      },
+      "sourceCell": {
+        "left": 370,
+        "top": 849,
+        "right": 767,
+        "bottom": 1122
+      },
+      "anchorX": 576.5,
+      "scale": 1.2073490813648293,
+      "left": 26,
+      "top": 249,
+      "width": 454,
+      "height": 203,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "down",
+      "pose": 8,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 772,
+        "top": 888,
+        "width": 270,
+        "height": 169
+      },
+      "sourceBounds": {
+        "left": 774,
+        "top": 890,
+        "right": 1040,
+        "bottom": 1055
+      },
+      "sourceCell": {
+        "left": 767,
+        "top": 849,
+        "right": 1062,
+        "bottom": 1122
+      },
+      "anchorX": 918.5,
+      "scale": 1.2073490813648293,
+      "left": 79,
+      "top": 248,
+      "width": 326,
+      "height": 204,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    },
+    {
+      "view": "up",
+      "pose": 8,
+      "sheet": "reacoes.png",
+      "sourceCrop": {
+        "left": 1081,
+        "top": 881,
+        "width": 302,
+        "height": 172
+      },
+      "sourceBounds": {
+        "left": 1083,
+        "top": 883,
+        "right": 1381,
+        "bottom": 1051
+      },
+      "sourceCell": {
+        "left": 1062,
+        "top": 851,
+        "right": 1402,
+        "bottom": 1122
+      },
+      "anchorX": 1248,
+      "scale": 1.2073490813648293,
+      "left": 54,
+      "top": 244,
+      "width": 365,
+      "height": 208,
+      "majorComponents": 1,
+      "ignoredAlphaSpecks": 0
+    }
+  ],
+  "verification": {
+    "singleAnimalPerCrop": true,
+    "allFramesInsideMargins": true,
+    "perPoseScaling": false
+  },
+  "gifsReady": true,
+  "stats": {
+    "kind": "lion-cub",
+    "name": "Leãozinho",
+    "maxHp": 10,
+    "initiative": 7,
+    "damage": 3,
+    "range": 1,
+    "move": 3,
+    "skill": "Mordidinha"
+  }
+}

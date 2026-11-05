@@ -1,0 +1,60 @@
+{
+  "character": "Farrapo",
+  "format": "PNG transparente",
+  "integrated": true,
+  "views": [
+    "right",
+    "left",
+    "down",
+    "up"
+  ],
+  "posesPerView": 24,
+  "frames": 96,
+  "frameSize": 512,
+  "groundY": 480,
+  "sourceSheets": [
+    "prancha-right.png",
+    "prancha-left.png",
+    "prancha-down.png",
+    "prancha-up.png"
+  ],
+  "overrides": {
+    "up-14": "contracao-costas.png"
+  },
+  "rows": [
+    "idle",
+    "walk",
+    "rabbit",
+    "barrage",
+    "hit",
+    "death"
+  ],
+  "timing": {
+    "idle": 1.92,
+    "walk": 0.48,
+    "rabbit": 1.05,
+    "barrage": 2.3,
+    "hit": 0.52,
+    "bleed": 0.7,
+    "death": 1.15
+  },
+  "events": {
+    "kickImpact": 0.48,
+    "firstPellet": 0.42,
+    "pelletInterval": 0.13,
+    "pelletFlight": 0.34,
+    "pellets": 10
+  },
+  "barrage": {
+    "closedEyes": [
+      13,
+      14
+    ],
+    "relief": 15,
+    "flush": "barrageFlush compartilhada com animation.js",
+    "pulse": "barragePulse compartilhada com animation.js"
+  },
+  "viewer": "index.html",
+  "generator": ".openai/build-rabbit-png.mjs",
+  "verification": ".openai/verify-rabbit-png.mjs"
+}

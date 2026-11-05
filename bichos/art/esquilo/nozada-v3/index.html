@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nozada · estudo de animação</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#242a20;color:#ebe4cd;font:16px system-ui}main{max-width:840px;padding:24px;margin:auto}
+  h1{font:italic 36px Georgia;margin:0 0 8px}p{color:#c7c6af;line-height:1.45}
+  svg{display:block;width:100%;height:auto;margin-block:16px;border:1px solid #8d9273;border-radius:7px}
+  .controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}
+  button,select{background:#424b35;color:#f3ead4;border:1px solid #828c6a;border-radius:4px;padding:8px 10px;font:inherit}
+  button[aria-pressed="true"]{background:#7c6341;border-color:#d6bb87}input{flex:1;min-width:115px;accent-color:#dbb982}
+  output{min-width:92px;font-variant-numeric:tabular-nums}a{color:#e7c490}
+</style>
+<main>
+  <h1>Esquilo Histérico</h1>
+  <p>Estudo de atuação em perfil. As duas cenas têm 12 poses novas cada.</p>
+  <div class="controls">
+    <button type="button" data-clip="acidente" aria-pressed="true">A noz escapa</button>
+    <button type="button" data-clip="susto" aria-pressed="false">Susto e fuga</button>
+  </div>
+  <svg viewBox="0 0 660 320" role="img" aria-label="Prévia animada do Esquilo Histérico com Farrapo">
+    <rect width="660" height="320" fill="#d0cbb2"/>
+    <path d="M0 258h660v62H0z" fill="#bebc9f"/><path d="M0 258h660" stroke="#aba98c"/>
+    <g fill="#57573b" opacity=".2">
+      <ellipse id="squirrel-shadow" cy="260" rx="39" ry="6"/>
+      <ellipse id="rabbit-shadow" cy="260" rx="34" ry="6"/>
+    </g>
+    <image id="rabbit" y="62" width="222" height="222"/>
+    <image id="squirrel" width="324" height="235"/>
+    <g id="nut" stroke="#251b12" stroke-width="2.5" stroke-linejoin="round"/>
+  </svg>
+  <div class="controls">
+    <button id="play" type="button">Pausar</button>
+    <input id="scrub" type="range" min="0" value="0" aria-label="Quadro da animação">
+    <output id="count" for="scrub"></output>
+    <select id="speed" aria-label="Velocidade de reprodução">
+      <option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option>
+    </select>
+  </div>
+  <p><a href="acidente.gif">GIF da noz</a> · <a href="susto.gif">GIF do susto</a></p>
+</main>
+<script src="previa-dados.js"></script>
+<script>
+  const {animation,nutDrawing,rabbitX,ground,pivotX,pivotY}=window.nozadaStudy;
+  const get=id=>document.getElementById(id);
+  const play=get('play'),scrub=get('scrub'),speed=get('speed'),count=get('count');
+  const squirrel=get('squirrel'),rabbit=get('rabbit'),shadow=get('squirrel-shadow'),rabbitShadow=get('rabbit-shadow'),nut=get('nut');
+  nut.innerHTML=nutDrawing;
+  let clip='acidente',elapsed=0,playing=true,previous=performance.now(),shown='';
+  for(const name of Object.keys(animation))for(let i=1;i<=12;i++)new Image().src=`quadros/${name}-${i}.png`;
+  function show(){
+    const frames=animation[clip],i=Math.min(frames.length-1,Math.floor(elapsed/40)),frame=frames[i];
+    const key=`${clip}/${i}`;
+    if(key===shown)return;
+    shown=key;scrub.max=frames.length-1;scrub.value=i;count.value=`${i+1} / ${frames.length}`;
+    squirrel.setAttribute('href',`quadros/${clip}-${frame.pose}.png`);
+    squirrel.setAttribute('x',frame.x-pivotX);squirrel.setAttribute('y',ground-frame.lift-pivotY);
+    shadow.setAttribute('cx',frame.x);shadow.setAttribute('rx',39-frame.lift*.22);
+    const tx=rabbitX+(frame.hit?9:0);
+    rabbitShadow.setAttribute('cx',tx);rabbit.setAttribute('x',tx-111);
+    rabbit.setAttribute('href',frame.hit?'farrapo-impacto.png':'farrapo.png');
+    nut.setAttribute('visibility',frame.nut?'visible':'hidden');
+    if(frame.nut){const [x,y,angle]=frame.nut;nut.setAttribute('transform',`translate(${x} ${y}) rotate(${angle*180/Math.PI})`);}
+  }
+  function setPlaying(value){playing=value;play.textContent=playing?'Pausar':'Reproduzir';}
+  play.onclick=()=>setPlaying(!playing);
+  scrub.oninput=()=>{setPlaying(false);elapsed=Number(scrub.value)*40;show();};
+  for(const button of document.querySelectorAll('[data-clip]'))button.onclick=()=>{
+    document.querySelector('[data-clip][aria-pressed="true"]').setAttribute('aria-pressed','false');
+    button.setAttribute('aria-pressed','true');clip=button.dataset.clip;elapsed=0;show();
+  };
+  function tick(now){
+    if(playing){elapsed=(elapsed+(now-previous)*Number(speed.value))%(animation[clip].length*40+520);show();}
+    previous=now;requestAnimationFrame(tick);
+  }
+  show();requestAnimationFrame(tick);
+</script>
+</html>

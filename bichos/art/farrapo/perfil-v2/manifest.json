@@ -1,0 +1,44 @@
+{
+  "character": "Farrapo",
+  "version": 2,
+  "directions": [
+    "right",
+    "left"
+  ],
+  "framesPerAction": 12,
+  "frameSize": [
+    330,
+    450
+  ],
+  "actions": {
+    "repouso": {
+      "kind": "idle",
+      "duration": 2400
+    },
+    "salto": {
+      "kind": "jump",
+      "duration": 480
+    },
+    "coice": {
+      "kind": "rabbit",
+      "duration": 1050
+    },
+    "rajada": {
+      "kind": "barrage",
+      "duration": 2300
+    }
+  },
+  "events": {
+    "coice": {
+      "release": 0.43,
+      "impact": 0.48
+    },
+    "rajada": {
+      "release": 0.18,
+      "impact": 0.84
+    }
+  },
+  "source": "dist/rabbit-profile.js",
+  "integration": "articulated-vector",
+  "notes": "PNGs derivados das articulações usadas no jogo; lados com olho, marcas e sobreposição de orelhas próprios."
+}

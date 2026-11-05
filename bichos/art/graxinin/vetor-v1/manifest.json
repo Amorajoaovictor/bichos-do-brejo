@@ -1,0 +1,22 @@
+{
+  "character": "Graxinin",
+  "representation": "Native articulated SVG paths; no PNG character plane.",
+  "directions": [
+    "down",
+    "right",
+    "left",
+    "up"
+  ],
+  "actions": {
+    "repouso": 2400,
+    "caminhada": 620,
+    "arremesso": 1200,
+    "garrafada": 1200,
+    "dano": 520,
+    "derrota": 1150
+  },
+  "framesPerAction": 30,
+  "release": 0.5,
+  "impact": 0.76,
+  "status": "Integrated in place of Bolota. PNG and GIF are previews of the vector rig."
+}

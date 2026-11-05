@@ -1,0 +1,34 @@
+{
+  "character": "Farrapo",
+  "action": "rajada",
+  "version": 2,
+  "directions": [
+    "right",
+    "left",
+    "down",
+    "up"
+  ],
+  "framesPerDirection": 70,
+  "frameSize": [
+    330,
+    450
+  ],
+  "duration": 2300,
+  "previewFinalHold": 1100,
+  "representation": "native-articulated-vector",
+  "sources": [
+    "dist/expressions.js",
+    "dist/animation.js"
+  ],
+  "expressions": [
+    "panic",
+    "strain",
+    "relief"
+  ],
+  "events": {
+    "firstRelease": 420,
+    "releaseInterval": 130,
+    "pellets": 10
+  },
+  "notes": "Rosto avermelhado nos paths originais; contrações faciais sincronizadas às emissões. Frente e perfis; costas sem rosto visível. PNGs e GIFs são apenas prévias."
+}

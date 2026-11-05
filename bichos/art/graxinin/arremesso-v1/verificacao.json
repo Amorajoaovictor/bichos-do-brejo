@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "frames": 48,
+  "checks": [
+    "PNG transparente e sem corte nas bordas",
+    "seleção dos 12 quadros em quatro vistas",
+    "pausa e reprodução",
+    "mudança de velocidade",
+    "tela estreita"
+  ],
+  "errors": []
+}

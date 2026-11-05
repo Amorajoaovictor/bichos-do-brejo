@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Farrapo · laboratório de mutações</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+  <header><div><a href="/art/farrapo/png-v1/index.html">← Animações atuais</a><p class="eyebrow">BICHOS DO BREJO / ESTUDO DE ARTE 01</p><h1>Farrapo <em>em camadas.</em></h1><p class="intro">Troque as partes em PNG e compare o movimento com o desenho atual.</p></div><span class="badge">PRÉVIA EXPERIMENTAL</span></header>
+  <div class="workspace">
+    <section class="viewer" aria-label="Comparação animada">
+      <div class="toolbar">
+        <label>Ação<select id="action"><option value="idle">Repouso</option><option value="walk">Salto</option><option value="rabbit">Coice</option><option value="barrage">Rajada</option><option value="hit">Dano</option><option value="bleed">Sangramento</option><option value="death">Derrota</option></select></label>
+        <button id="play" type="button">Pausar</button><button id="restart" type="button" title="Recomeçar a ação">↺ Recomeçar</button>
+        <label>Velocidade<select id="speed"><option value=".5">0,5×</option><option selected value="1">1×</option><option value="1.5">1,5×</option></select></label>
+      </div>
+      <div class="views" role="group" aria-label="Direção"><button data-view="right" aria-pressed="false">Direita</button><button data-view="left" aria-pressed="false">Esquerda</button><button data-view="down" aria-pressed="true">Frente</button><button data-view="up" aria-pressed="false">Costas</button><button data-view="all" aria-pressed="false">Quatro vistas</button></div>
+      <div id="stages"></div>
+      <div class="timeline"><input id="frame" type="range" min="0" max="1000" value="0" aria-label="Inspecionar o momento da animação"><label class="time-label"><input id="seconds" type="number" min="0" max="1.92" step=".01" value="0" aria-label="Tempo em segundos"><span>s</span></label></div>
+      <div class="inspect"><label>Mostrar<select id="mode"><option value="assembled">Personagem montado</option><option value="exploded">Camadas separadas</option><option value="isolate">Uma parte por vez</option></select></label><label id="isolate-wrap" hidden>Parte<select id="isolate"></select></label><label class="check"><input id="guides" type="checkbox"> Encaixes</label></div>
+      <p id="status" role="status">Carregando os PNGs…</p>
+    </section>
+    <aside aria-label="Escolha das mutações"><p class="eyebrow">MUTAÇÕES POR PARTE</p><h2>Monte sua combinação</h2><p class="aside-note">Uma escolha por parte. Braços e pernas podem ser diferentes entre si.</p><div id="slots"></div><div class="presets"><button id="all" type="button">Todas juntas</button><button id="none" type="button">Sem mutações</button><button id="random" type="button">Sortear combinação</button></div><p class="study-note">Exemplos visuais para testar os encaixes. Ainda não definem efeitos no combate.</p></aside>
+  </div>
+  <footer><strong>O que este teste mostra</strong><p>O primeiro desenho usa os quadros atuais. Os outros dois usam peças PNG articuladas, com a mesma ação e o mesmo tempo entre si. Saltos, coice e queda ainda são estudos de movimento; a versão final pode precisar de desenhos específicos para cada ação.</p><p>Na rajada, o esforço mantém os olhos fechados e termina com 1,8 s de alívio. A derrota segura a última pose. Esta prévia não substitui o Farrapo do jogo.</p></footer>
+</main>
+<script type="module" src="./preview.js"></script>
+</body></html>

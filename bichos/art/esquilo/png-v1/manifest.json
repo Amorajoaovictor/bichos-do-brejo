@@ -1,0 +1,333 @@
+{
+  "character": "Esquilo Histérico",
+  "format": "PNG transparente",
+  "integrated": true,
+  "views": [
+    "right",
+    "left",
+    "down",
+    "up"
+  ],
+  "posesPerView": 9,
+  "frames": 36,
+  "sequences": {
+    "idle": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "walk": [
+      2,
+      3,
+      2,
+      3
+    ],
+    "throw": [
+      0,
+      4,
+      4,
+      5,
+      5,
+      0
+    ],
+    "hit": [
+      6,
+      6,
+      0
+    ],
+    "bleed": [
+      6,
+      0
+    ],
+    "death": [
+      6,
+      7,
+      8,
+      8
+    ]
+  },
+  "timing": {
+    "idle": 0.72,
+    "walk": 0.32,
+    "throw": 0.95,
+    "hit": 0.52,
+    "bleed": 0.7,
+    "death": 1.05,
+    "release": 0.5,
+    "impact": 0.78
+  },
+  "stats": {
+    "hp": 12,
+    "damage": 3,
+    "range": 3,
+    "move": 3,
+    "initiative": 9
+  },
+  "sourceSheets": [
+    "movimentos.png",
+    "reacoes.png"
+  ],
+  "cuts": {
+    "motion": [
+      [
+        13,
+        202
+      ],
+      [
+        215,
+        392
+      ],
+      [
+        406,
+        564
+      ],
+      [
+        579,
+        734
+      ],
+      [
+        741,
+        909
+      ],
+      [
+        919,
+        1076
+      ]
+    ],
+    "reactions": [
+      [
+        282,
+        521
+      ],
+      [
+        576,
+        778
+      ],
+      [
+        858,
+        1026
+      ]
+    ]
+  },
+  "frameBounds": [
+    {
+      "view": "right",
+      "pose": 0,
+      "width": 386,
+      "height": 280
+    },
+    {
+      "view": "left",
+      "pose": 0,
+      "width": 374,
+      "height": 283
+    },
+    {
+      "view": "down",
+      "pose": 0,
+      "width": 274,
+      "height": 241
+    },
+    {
+      "view": "up",
+      "pose": 0,
+      "width": 360,
+      "height": 277
+    },
+    {
+      "view": "right",
+      "pose": 1,
+      "width": 399,
+      "height": 263
+    },
+    {
+      "view": "left",
+      "pose": 1,
+      "width": 373,
+      "height": 249
+    },
+    {
+      "view": "down",
+      "pose": 1,
+      "width": 296,
+      "height": 248
+    },
+    {
+      "view": "up",
+      "pose": 1,
+      "width": 362,
+      "height": 260
+    },
+    {
+      "view": "right",
+      "pose": 2,
+      "width": 392,
+      "height": 230
+    },
+    {
+      "view": "left",
+      "pose": 2,
+      "width": 405,
+      "height": 227
+    },
+    {
+      "view": "down",
+      "pose": 2,
+      "width": 280,
+      "height": 227
+    },
+    {
+      "view": "up",
+      "pose": 2,
+      "width": 335,
+      "height": 233
+    },
+    {
+      "view": "right",
+      "pose": 3,
+      "width": 392,
+      "height": 233
+    },
+    {
+      "view": "left",
+      "pose": 3,
+      "width": 382,
+      "height": 233
+    },
+    {
+      "view": "down",
+      "pose": 3,
+      "width": 273,
+      "height": 216
+    },
+    {
+      "view": "up",
+      "pose": 3,
+      "width": 321,
+      "height": 225
+    },
+    {
+      "view": "right",
+      "pose": 4,
+      "width": 401,
+      "height": 244
+    },
+    {
+      "view": "left",
+      "pose": 4,
+      "width": 368,
+      "height": 252
+    },
+    {
+      "view": "down",
+      "pose": 4,
+      "width": 270,
+      "height": 229
+    },
+    {
+      "view": "up",
+      "pose": 4,
+      "width": 348,
+      "height": 247
+    },
+    {
+      "view": "right",
+      "pose": 5,
+      "width": 393,
+      "height": 225
+    },
+    {
+      "view": "left",
+      "pose": 5,
+      "width": 379,
+      "height": 232
+    },
+    {
+      "view": "down",
+      "pose": 5,
+      "width": 282,
+      "height": 216
+    },
+    {
+      "view": "up",
+      "pose": 5,
+      "width": 358,
+      "height": 233
+    },
+    {
+      "view": "right",
+      "pose": 6,
+      "width": 386,
+      "height": 276
+    },
+    {
+      "view": "left",
+      "pose": 6,
+      "width": 374,
+      "height": 269
+    },
+    {
+      "view": "down",
+      "pose": 6,
+      "width": 274,
+      "height": 236
+    },
+    {
+      "view": "up",
+      "pose": 6,
+      "width": 360,
+      "height": 260
+    },
+    {
+      "view": "right",
+      "pose": 7,
+      "width": 379,
+      "height": 236
+    },
+    {
+      "view": "left",
+      "pose": 7,
+      "width": 367,
+      "height": 227
+    },
+    {
+      "view": "down",
+      "pose": 7,
+      "width": 278,
+      "height": 197
+    },
+    {
+      "view": "up",
+      "pose": 7,
+      "width": 360,
+      "height": 198
+    },
+    {
+      "view": "right",
+      "pose": 8,
+      "width": 387,
+      "height": 184
+    },
+    {
+      "view": "left",
+      "pose": 8,
+      "width": 381,
+      "height": 180
+    },
+    {
+      "view": "down",
+      "pose": 8,
+      "width": 311,
+      "height": 171
+    },
+    {
+      "view": "up",
+      "pose": 8,
+      "width": 347,
+      "height": 140
+    }
+  ]
+}
